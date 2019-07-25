@@ -1,5 +1,6 @@
 package com.gargpiyush.android.useraccountmanagement.network;
 
+import com.gargpiyush.android.useraccountmanagement.model.DetailsUpdateRequest;
 import com.gargpiyush.android.useraccountmanagement.model.LoginRequest;
 import com.gargpiyush.android.useraccountmanagement.model.LoginResponse;
 import com.gargpiyush.android.useraccountmanagement.model.SignUpRequest;
@@ -26,7 +27,7 @@ public interface AccountManagementResponse {
     Call<LoginResponse> postLoginRequest(@Body LoginRequest loginRequest);
 
     @PATCH("user/me")
-    Call<Void> patchUser(@Header("Authorization") String authHeader);
+    Call<Void> patchUser(@Header("Authorization") String authHeader, @Body DetailsUpdateRequest detailsUpdateRequest);
 
     @GET("user/me")
     Call<UserInfoResponse> getUserInfo(@Header("Authorization") String authHeader);

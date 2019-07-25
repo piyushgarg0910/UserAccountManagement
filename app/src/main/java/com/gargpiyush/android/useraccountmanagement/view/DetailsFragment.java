@@ -153,7 +153,7 @@ public class DetailsFragment extends Fragment {
                 new AccountManagementViewModelFactory(accountManagementRepo);
         viewModel = ViewModelProviders.of(this,factory)
                 .get(AccountManagementViewModel.class);
-        viewModel.makePatchDataCall(loginResponse.getLoginResponseData().getaToken());
+        viewModel.makePatchDataCall(loginResponse.getLoginResponseData().getaToken(), detailsUpdateRequest);
     }
 
     final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {

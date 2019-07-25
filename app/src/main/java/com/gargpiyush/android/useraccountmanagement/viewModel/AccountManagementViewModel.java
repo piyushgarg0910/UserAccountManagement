@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModel;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.gargpiyush.android.useraccountmanagement.model.DetailsUpdateRequest;
 import com.gargpiyush.android.useraccountmanagement.model.LoginRequest;
 import com.gargpiyush.android.useraccountmanagement.model.LoginResponse;
 import com.gargpiyush.android.useraccountmanagement.model.SignUpRequest;
@@ -23,7 +24,7 @@ public class AccountManagementViewModel extends ViewModel{
 
     private AccountManagementRepo accountManagementRepo;
 
-    AccountManagementViewModel(AccountManagementRepo accountManagementRepo) {
+    public AccountManagementViewModel(AccountManagementRepo accountManagementRepo) {
         this.accountManagementRepo = accountManagementRepo;
     }
 
@@ -39,7 +40,7 @@ public class AccountManagementViewModel extends ViewModel{
         return accountManagementRepo.getUserData(token);
     }
 
-    public void makePatchDataCall(String token){
-        accountManagementRepo.patch(token);
+    public void makePatchDataCall(String token, DetailsUpdateRequest request){
+        accountManagementRepo.patch(token, request);
     }
 }

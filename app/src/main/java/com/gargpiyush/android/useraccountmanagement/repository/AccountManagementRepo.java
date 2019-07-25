@@ -5,6 +5,7 @@ import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
 import android.util.Log;
 
+import com.gargpiyush.android.useraccountmanagement.model.DetailsUpdateRequest;
 import com.gargpiyush.android.useraccountmanagement.model.LoginRequest;
 import com.gargpiyush.android.useraccountmanagement.model.LoginResponse;
 import com.gargpiyush.android.useraccountmanagement.model.SignUpRequest;
@@ -81,9 +82,9 @@ public class AccountManagementRepo implements Serializable {
         return userInfoResponseMutableLiveData;
     }
 
-    public void patch(String token){
+    public void patch(String token, DetailsUpdateRequest request){
         String header = "Bearer " + token;
-        accountManagementResponse.patchUser(header).enqueue(new Callback<Void>() {
+        accountManagementResponse.patchUser(header, request).enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
 
