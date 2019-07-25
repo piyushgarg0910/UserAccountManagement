@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">UserAccountManagement</string>
+    <string name="login">Login</string>
+    <string name="signUp">Sign Up</string>
+    <string name="Positive">YES</string>
+    <string name="Negative">NO</string>
+    <string name="NameText">First Name</string>
+    <string name="LastNameText">Last Name</string>
+    <string name="NameEditText">John/Jane</string>
+    <string name="LastNameEditText">Doe</string>
+    <string name="ExitDialogTitle">Close Application</string>
+    <string name="ExitDialogMessage">Do you wish to exit?</string>
+    <string name="EmailEditText">john/jane.doe@example.com</string>
+    <string name="EmailText">Enter your email address: </string>
+    <string name="PasswordText">Enter a valid password: </string>
+    <string name="NextPageButton">Next</string>
+    <string name="DateOfBirthText">DOB:</string>
+    <string name="LocationText">Location: </string>
+    <string name="Continue">Continue</string>
+    <string name="DateOfBirthEditText">MM/DD/YYYY</string>
+    <string name="WrongEmailText">Please enter a valid email address to continue.</string>
+    <string name="AuthFailure">Invalid email address or password. Try logging in again or sign-up.
+    </string>
+    <string name="WrongPasswordText">Password must be 8-16 characters in length, and must
+        contain at least one lower case, one uppercase, one number, and one special character
+        among !@#$%^*()_.</string>
+    <string name="positive">Yes</string>
+    <string name="negative">No</string>
+    <string name="close_application_message">Do you wish to close this application?</string>
+    <string name="close_application_title">Close Application!</string>
+</resources>

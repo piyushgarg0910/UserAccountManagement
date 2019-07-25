@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/LoginContainer"
+    android:layout_marginEnd="32dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="?android:attr/actionBarSize"
+    android:layout_marginBottom="32dp"
+    android:clickable="true"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/TextViewEmailLogin"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:text="@string/EmailText"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:inputType="textEmailAddress|textEmailSubject|textWebEmailAddress"
+        android:hint="@string/EmailEditText"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:textCursorDrawable="@null"
+        android:layout_below="@id/TextViewEmailLogin"
+        android:id="@+id/EditTextEmailLogin"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:background="@drawable/edit_text_background"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/TextViewPasswordLogin"
+        android:layout_below="@id/EditTextEmailLogin"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:text="@string/PasswordText"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:inputType="textPassword"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:textCursorDrawable="@null"
+        android:layout_below="@id/TextViewPasswordLogin"
+        android:id="@+id/EditTextPasswordLogin"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:maxLength="16"
+        android:background="@drawable/edit_text_background"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_below="@id/EditTextPasswordLogin"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/AuthFailure"
+        android:textColor="@color/regActivityNegativeColor"
+        android:textSize="12sp"
+        android:text="@string/AuthFailure"
+        android:visibility="invisible"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background_disabled"
+        android:text="@string/login"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        android:id="@+id/LoginPageButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:layout_marginBottom="32dp"
+        android:enabled="false"/>
+
+</RelativeLayout>
